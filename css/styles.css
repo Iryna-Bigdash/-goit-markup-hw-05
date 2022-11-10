@@ -754,7 +754,10 @@ body {
   height: 100%;
   background-color: var(--backdrop-bgr);
   opacity: 1;
-  transition: opasity var(--transition-time) var(--function-time);
+  z-index: 50;
+
+  transition: visibility var(--transition-time) var(--function-time),opacity var(--transition-time) var(--function-time);
+ 
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -779,7 +782,6 @@ body {
   box-shadow: var(--modal-box-shedow);
   border-radius: 4px;
 
-  margin-top: 40px;
   transition: transform var(--transition-time) var(--function-time);
 }
 
@@ -791,6 +793,7 @@ body {
   top: 0;
   right: 0;
   justify-content: center;
+  
   width: 30px;
   height: 30px;
   background: var(--icon-footer-bgr);
